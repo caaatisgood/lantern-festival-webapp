@@ -2,12 +2,6 @@ var request = require('request');
 
 module.exports = function (app) {
 
-  app.all('/', function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    next();
-  });
-
   app.get('/api/tag', function (req, res) {
     getByTag(function(data) {
       res.json(data);
