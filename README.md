@@ -1,4 +1,4 @@
-#Lantern Festival Webapp Backend Instagram API
+#Lantern Festival Webapp Backend with Instagram API
 
 A project of NYUST Hackathon (2016.06.29 - 2016.06.30)
 
