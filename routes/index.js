@@ -20,6 +20,12 @@ module.exports = function (app) {
     })
   });
 
+  // app.get('/api/wordcloud', function (req, res) {
+  //   getWordCloud(function(data) {
+
+  //   })
+  // });
+
   app.use('*', function (req, res) {
     res.send("yeah!");
   });
@@ -29,7 +35,7 @@ module.exports = function (app) {
 
 var ACCESS_TOKEN = '3475935603.9a87aab.501989d78f4a4c31b7656c0064902fe7';
 
-function getByTag(callback) {
+var getByTag = function (callback) {
   var tag = '2017lanternfestival';
   var tagRecentUrl = 'https://api.instagram.com/v1/tags/' + tag + '/media/recent?access_token=' + ACCESS_TOKEN;
   request(tagRecentUrl, function (error, response, body) {
@@ -39,7 +45,7 @@ function getByTag(callback) {
   });
 }
 
-function getByLocation(callback) {
+var getByLocation = function (callback) {
   var location_id = '214902213';
   var locationUrl = 'https://api.instagram.com/v1/locations/' + location_id + '/media/recent?access_token=' + ACCESS_TOKEN;
   request(locationUrl, function (error, response, body) {
@@ -49,7 +55,7 @@ function getByLocation(callback) {
   });
 }
 
-function getByTagMission2(callback) {
+var getByTagMission2 = function (callback) {
   var tag = '2017lfmission2';
   var tagRecentUrl = 'https://api.instagram.com/v1/tags/' + tag + '/media/recent?access_token=' + ACCESS_TOKEN;
   request(tagRecentUrl, function (error, response, body) {
@@ -57,4 +63,8 @@ function getByTagMission2(callback) {
       callback(JSON.parse(body));
     }
   });
+}
+
+var getWordCloud = function (callback) {
+  
 }
