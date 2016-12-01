@@ -31,9 +31,8 @@ module.exports = function (app) {
   });
 }
 
-// 1624245207.ef65aa6.9b24069f5e3b452282bcd31a75dda8df
 
-var ACCESS_TOKEN = '3475935603.9a87aab.501989d78f4a4c31b7656c0064902fe7';
+var ACCESS_TOKEN = '';
 
 var getByTag = function (callback) {
   var tag = '2017lanternfestival';
